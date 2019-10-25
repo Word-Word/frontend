@@ -4,17 +4,17 @@ import Sidebar from "./Sidebar"
 export const DrawerOption = {
   initialRouteName: "Main",
   contentOptions: {
-    activeTintColor: "#44F2",
+    activeTintColor: "#548ff7",
     activeBackgroundColor: "transparent",
     inactiveTintColor: "#ffffff",
+    inactiveBackgroundColor: "transparent", //
     labelStyle: {
       fontSize: 15,
       marginLeft: 0,
     },
   },
   drawerWidth: Math.min(Dimensions.get("window").width * 0.8, 300),
-  comtentComponent: Sidebar,
-  headerMode: "none",
+  contentComponent: Sidebar,
 }
 
 export const AppStackOption = {

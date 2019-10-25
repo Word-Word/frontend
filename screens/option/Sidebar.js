@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Dimensions, Image } from "react-native"
+import { View, Image, Dimensions } from "react-native"
 import { DrawerNavigatorItems } from "react-navigation-drawer"
 
 const Sidebar = (props) => (

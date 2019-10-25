@@ -4,33 +4,43 @@ import { createDrawerNavigator } from "react-navigation-drawer"
 import { createBottomTabNavigator } from "react-navigation-tabs"
 import { DrawerOption, AppStackOption, AuthStackOption } from "./option/NavigationOptions"
 import Test from "./Test"
+import Access from "./auth/Access"
+//tab
+import Address from "./tab/address/Address"
+import Calendar from "./tab/calendar/Calendar"
+import Chat from "./tab/chat/Chat"
+import Activity from "./tab/activity/Activity"
+import Board from "./tab/board/Board"
+import Counter from "./Counter"
+//auth
+import ForgotPassword from "./auth/ForgotPassword"
+const AddressStack = createStackNavigator({
+  AddressMain: { screen: Address },
+})
+const CalendarStack = createStackNavigator({
+  CalendarMain: { screen: Calendar },
+})
+const ChatStack = createStackNavigator({
+  ChatMain: { screen: Chat },
+})
+const BoardStack = createStackNavigator({
+  BoardMain: { screen: Board },
+})
+const ActivityStack = createStackNavigator({
+  ActivityMain: { screen: Activity },
+})
 
-const Address = createStackNavigator({
-  AddressMain: { screen: Test },
-})
-const Calendar = createStackNavigator({
-  CalendarMain: { screen: Test },
-})
-const Chat = createStackNavigator({
-  ChatMain: { screen: Test },
-})
-const Board = createStackNavigator({
-  BoardMain: { screen: Test },
-})
-const Activity = createStackNavigator({
-  ActivityMain: { screen: Test },
-})
-
-const Setting = createStackNavigator({
+const SettingStack = createStackNavigator({
   SettingMain: { screen: Test },
 })
 
 const MainTab = createBottomTabNavigator({
-  Address: { screen: Address },
-  Calendar: { screen: Calendar },
-  Chat: { screen: Chat },
-  Board: { screen: Board },
-  Activity: { screen: Activity },
+  Counter: { screen: Counter },
+  Address: { screen: AddressStack },
+  Calendar: { screen: CalendarStack },
+  Chat: { screen: ChatStack },
+  Board: { screen: BoardStack },
+  Activity: { screen: ActivityStack },
 })
 
 const Drawer = createDrawerNavigator(
@@ -51,8 +61,8 @@ const AppStack = createStackNavigator(
 
 const AuthStack = createStackNavigator(
   {
-    Access: { screen: Test },
-    ForgotPassword: { screen: Test },
+    Access: { screen: Access },
+    ForgotPassword: { screen: ForgotPassword },
     ResetPassword: { screen: Test },
   },
   AuthStackOption,
