@@ -1,5 +1,3 @@
-
-
 ## init
 
 ```bash
@@ -11,4 +9,10 @@ expo init icepick-front-footnote
 
 ```bash
 yarn add react-native-elements @expo/vector-icons prop-types lodash expo-font expo-asset react-native-screens react-navigation react-navigation-stack react-navigation-tabs react-navigation-drawer --save
+```
+
+## auth
+
+```bash
+yarn add expo-google-app-auth firebase # google
 ```

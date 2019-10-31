@@ -1,10 +1,12 @@
 import React from "react"
-import ChatComponent from "../../../components/tab/chat/Chat"
-import { Header } from "react-native-elements"
-const Chat = ({ navigation }) => {
-  return <ChatComponent navigation={navigation} />
+import { View } from "react-native"
+import { Button, Text, Header } from "react-native-elements"
+import ChatRoomComponent from "../../../components/tab/chat/ChatRoom"
+// redux test
+const ChatRoom = ({ navigation }) => {
+  return <ChatRoomComponent navigation={navigation} />
 }
-Chat.navigationOptions = (screenProps) => ({
+ChatRoom.navigationOptions = (screenProps) => ({
   header: (
     <Header
       placement="left"
@@ -18,5 +20,4 @@ Chat.navigationOptions = (screenProps) => ({
     />
   ),
 })
-
-export default Chat
+export default ChatRoom
